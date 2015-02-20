@@ -17,4 +17,6 @@
 3. Для использования скопируй себе блоки fa и fa-stack из desktop.blocks
 4. Не поленился и накалякал [документацию](https://github.com/1vank1n/bem-fa/blob/master/desktop.blocks/fa/fa.ru.md)
 
-### [Пример](https://1vank1n.github.io/bem-fa/)
+### Примеры
+* [Тестовая страничка, показывает все возможности реализации блока](https://1vank1n.github.io/bem-fa/)
+* [Пример лэндинга](https://1vank1n.github.io/bem-landing/)
