@@ -1,0 +1,6 @@
+block('fa-stack')(
+    tag()('span'),
+    cls()(function(){ 
+        return 'fa-' + this.ctx.size; 
+    })
+)

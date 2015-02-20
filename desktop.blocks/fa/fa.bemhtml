@@ -1,0 +1,50 @@
+block('fa')(
+    tag()('i'),
+    cls()(function(){ 
+        var arr = [],
+            icon = this.ctx.icon,
+            size = this.ctx.size,
+            width = this.ctx.width,
+            list = this.ctx.list,
+            rotate = this.ctx.rotate,
+            flip = this.ctx.flip,
+            stack = this.ctx.stack,
+            cls = this.ctx.cls;
+
+        if (cls) return cls;
+
+        if (icon) arr.push('', icon);
+        if (size) arr.push(size);
+        if (width === 'fixed') arr.push('fw');
+        if (list) arr.push('li');
+        if (rotate) {
+            var angle = 0;
+            switch (rotate) {
+                case 'spin':
+                    arr.push('spin');
+                    break;
+                case 'pulse':
+                    arr.push('pulse');
+                    break;
+                case ('270' || 270):
+                    angle += 90;
+                case ('180' || 180):
+                    angle += 90;
+                case ('90' || 90):
+                    angle += 90;
+                default:
+                    arr.push('rotate-' + angle);
+            }
+        }
+        if (flip) arr.push('flip-'+flip);
+        if (stack) arr.push('stack-'+stack);
+
+        return arr.join(' fa-'); 
+    }),
+    attrs()(function(){
+        if (this.ctx.color) {
+            var c = 'color:'+this.ctx.color;
+            return {'style': c}
+        }
+    })
+)

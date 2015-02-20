@@ -97,10 +97,10 @@
                     mix : { block: 'fa-ul' },
                     content : [
                         [
-                            { 'icon' : 'check-square' },
-                            { 'icon' : 'check-square' },
-                            { 'icon' : 'check-square' },
-                            { 'icon' : 'square' }
+                            { 'icon' : 'check-square', 'text' : 'bla bla bla 1' },
+                            { 'icon' : 'check-square', 'text' : 'bla bla bla 2' },
+                            { 'icon' : 'check-square', 'text' : 'bla bla bla 3' },
+                            { 'icon' : 'square', 'text' : 'bla bla bla 4' }
                         ].map(function(b){
                             return {
                                 elem : 'item',
@@ -110,7 +110,7 @@
                                         block : 'fa',
                                         icon : b.icon,
                                         list : true
-                                    }, ' fa-' + b.icon
+                                    }, b.text
                                 ]
                             }
                         })
@@ -204,6 +204,20 @@
                             icon : 'square-o'
                         }
                     ]
+                }
+            ]
+        },
+        {
+            block : 'row',
+            content : [
+                {
+                    block : 'heading',
+                    tag : 'h2',
+                    content : 'Free class'
+                },
+                {
+                    block : 'fa',
+                    cls : 'fa-twitter fa-4x fa-flip-horizontal'
                 }
             ]
         }
