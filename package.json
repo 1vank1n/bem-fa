@@ -1,10 +1,10 @@
 {
   "author": "",
-  "name": "bem-project-stub",
+  "name": "bem-fa",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bem/project-stub.git"
+    "url": "git://github.com/1vank1n/bem-fa.git"
   },
   "engines": {
     "node": ">=0.10"

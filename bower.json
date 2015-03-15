@@ -1,8 +1,8 @@
 {
-  "name": "bem-project-stub",
+  "name": "bem-fa",
   "version": "1.0.0",
   "description": "BEM project stub",
-  "bugs": "https://github.com/bem/project-stub/issues",
+  "bugs": "https://github.com/1vank1n/bem-fa/issues",
   "ignore": [
     "node_modules",
     "libs",
