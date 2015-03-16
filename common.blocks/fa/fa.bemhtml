@@ -1,12 +1,13 @@
 block('fa')(
     tag()('i'),
-    cls()(function(){ 
+    cls()(function(){
         var arr = [],
             icon = this.ctx.icon,
             size = this.ctx.size,
             width = this.ctx.width,
             list = this.ctx.list,
             rotate = this.ctx.rotate,
+            animate = this.ctx.animate,
             flip = this.ctx.flip,
             stack = this.ctx.stack,
             cls = this.ctx.cls;
@@ -20,12 +21,6 @@ block('fa')(
         if (rotate) {
             var angle = 0;
             switch (rotate) {
-                case 'spin':
-                    arr.push('spin');
-                    break;
-                case 'pulse':
-                    arr.push('pulse');
-                    break;
                 case ('270' || 270):
                     angle += 90;
                 case ('180' || 180):
@@ -36,10 +31,13 @@ block('fa')(
                     arr.push('rotate-' + angle);
             }
         }
+        if (animate === 'spin' || animate === 'pulse') {
+            arr.push(animate);
+        }
         if (flip) arr.push('flip-'+flip);
         if (stack) arr.push('stack-'+stack);
 
-        return arr.join(' fa-'); 
+        return arr.join(' fa-');
     }),
     attrs()(function(){
         if (this.ctx.color) {

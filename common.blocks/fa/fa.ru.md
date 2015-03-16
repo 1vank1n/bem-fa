@@ -14,7 +14,8 @@
 | <a href="#size">size</a> | <code>String</code> | Размер иконки. |
 | <a href="#width">width</a> | <code>String</code> | Фиксированная ширина иконки. |
 | <a href="#list">list</a> | <code>Boolean</code> | Иконка элемента списка. |
-| <a href="#rotate">rotate</a> | <code>String, Integer</code> | Постоянное вращение иконки, либо изменение угла. |
+| <a href="#rotate">rotate</a> | <code>String, Integer</code> | Изменение угла. |
+| <a href="#animate">animate</a> | <code>String</code> | Постоянное вращение иконки. |
 | <a href="#flip">flip</a> | <code>String</code> | Переворачивает иконку по горизонтальной\вертикальной оси. |
 | <a href="#stack">stack</a> | <code>String</code> | Используется при объединении иконок в стэк (блок = fa-stack). |
 | <a href="#cls">cls</a> | <code>String</code> | Прокидывает классы напрямую, если тебе так удобнее. |
@@ -131,16 +132,14 @@
 Тип: `String`, `Integer`.
 
 Для вращения:
-* 'spin' – постоянное вращение
-* 'pulse' – ступенчатое вращение (оборот за 8 шагов)
 * 90, 180, 270 либо '90', '180', '270' – задаёт угол поворота иконки
 
 ```js
 {
     block : 'fa',
     size : '5x',
-    icon : 'refresh',
-    rotate : 'spin'
+    icon : 'camera-retro',
+    rotate : '270'
 },
 {
     block : 'fa',
@@ -152,8 +151,37 @@
 
 Результат:
 ```html
-<i class="fa  fa-refresh fa-5x fa-spin"></i>
+<i class="fa  fa-camera-retro fa-5x fa-rotate-270"></i>
 <i class="fa  fa-camera-retro fa-5x fa-rotate-90"></i>
+```
+
+#### Поле `animate`
+
+Тип: `String`, `Integer`.
+
+Анимация:
+* 'spin' – постоянное вращение
+* 'pulse' – ступенчатое вращение (оборот за 8 шагов)
+
+```js
+{
+    block : 'fa',
+    size : '5x',
+    icon : 'refresh',
+    animate : 'spin'
+},
+{
+    block : 'fa',
+    size : '5x',
+    icon : 'refresh',
+    animate : 'pulse'
+}
+```
+
+Результат:
+```html
+<i class="fa  fa-refresh fa-5x fa-spin"></i>
+<i class="fa  fa-camera-retro fa-5x fa-pulse"></i>
 ```
 
 #### Поле `flip`

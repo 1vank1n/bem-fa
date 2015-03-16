@@ -71,12 +71,12 @@
                 {
                     size : '5x',
                     icon : 'refresh',
-                    rotate : 'spin'
+                    animate : 'spin'
                 },
                 {
                     size : '5x',
                     icon : 'spinner',
-                    rotate : 'pulse'
+                    animate : 'pulse'
                 }
             ]
         },
