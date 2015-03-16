@@ -8,7 +8,6 @@
         { elem : 'css', url : '../../libs/font-awesome/css/font-awesome.min.css' },
         { elem : 'css', url : '_index.css' }
     ],
-    mods : { theme : 'islands' },
     content : [
         {
             block : 'fa-example-group',
