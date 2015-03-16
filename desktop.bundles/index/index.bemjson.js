@@ -5,7 +5,7 @@
     head : [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
-        { elem : 'css', url : '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' },
+        { elem : 'css', url : '../../libs/font-awesome/css/font-awesome.min.css' },
         { elem : 'css', url : '_index.css' }
     ],
     mods : { theme : 'islands' },

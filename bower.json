@@ -9,6 +9,7 @@
     ".enb/tmp"
   ],
   "dependencies": {
-    "bem-components": "2.0.0"
+    "bem-components": "2.0.0",
+    "font-awesome": "4.3.0"
   }
 }
