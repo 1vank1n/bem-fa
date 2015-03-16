@@ -1,4 +1,7 @@
 ({
+    mustDeps: [
+        { block: 'fa' }
+    ],
     shouldDeps: [
         { elem: 'title' },
         { elem: 'item' },

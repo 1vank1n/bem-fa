@@ -1,6 +1,6 @@
 block('fa-example-group')(
     content()(function () {
-        var res = [
+        return [
             {
                 elem: 'title',
                 content: this.ctx.title
@@ -25,7 +25,5 @@ block('fa-example-group')(
                 })
             }
         ];
-
-        return res;
     })
 )

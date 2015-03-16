@@ -119,17 +119,15 @@
             title: 'Stacked Icons',
             content: [
                 {
-                    block : 'fa-stack',
+                    block : 'fa',
                     size : '5x',
-                    content : [
+                    stack : [
                         {
-                            block : 'fa',
-                            stack : '1x',
+                            size : '1x',
                             icon : 'twitter'
                         },
                         {
-                            block : 'fa',
-                            stack : '2x',
+                            size : '2x',
                             icon : 'square-o'
                         }
                     ]

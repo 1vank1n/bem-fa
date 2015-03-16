@@ -1,5 +1,17 @@
 block('fa')(
-    tag()('i'),
+    tag()(function () {
+        return this.ctx.stack ? 'span' : 'i';
+    }),
+    content()(function() {
+        var stack = this.ctx.stack;
+
+        return stack ? stack.map(function(icon) {
+            icon.block = 'fa';
+            icon.__instack = true;
+
+            return icon;
+        }) : this.ctx.content;
+    }),
     cls()(function(){
         var arr = [],
             icon = this.ctx.icon,
@@ -9,13 +21,21 @@ block('fa')(
             rotate = this.ctx.rotate,
             animate = this.ctx.animate,
             flip = this.ctx.flip,
+            instack = this.ctx.__instack,
             stack = this.ctx.stack,
             cls = this.ctx.cls;
 
         if (cls) return cls;
+        if (stack) return 'fa-stack fa-' + size;
 
         if (icon) arr.push('', icon);
-        if (size) arr.push(size);
+        if (size) {
+            if (instack) {
+                arr.push('stack-' + size);
+            } else {
+                arr.push(size);
+            }
+        }
         if (width === 'fixed') arr.push('fw');
         if (list) arr.push('li');
         if (rotate) {
@@ -35,7 +55,6 @@ block('fa')(
             arr.push(animate);
         }
         if (flip) arr.push('flip-'+flip);
-        if (stack) arr.push('stack-'+stack);
 
         return arr.join(' fa-');
     }),

@@ -17,7 +17,7 @@
 | <a href="#rotate">rotate</a> | <code>String, Integer</code> | Изменение угла. |
 | <a href="#animate">animate</a> | <code>String</code> | Постоянное вращение иконки. |
 | <a href="#flip">flip</a> | <code>String</code> | Переворачивает иконку по горизонтальной\вертикальной оси. |
-| <a href="#stack">stack</a> | <code>String</code> | Используется при объединении иконок в стэк (блок = fa-stack). |
+| <a href="#stack">stack</a> | <code>String</code> | Используется при объединении иконок в стэк. |
 | <a href="#cls">cls</a> | <code>String</code> | Прокидывает классы напрямую, если тебе так удобнее. |
 
 ## Описание блока
@@ -234,6 +234,35 @@
         {
             block : 'fa',
             stack : '2x',
+            icon : 'square-o'
+        }
+    ]
+}
+```
+
+Результат:
+```html
+<span class="fa-stack fa-5x">
+    <i class="fa  fa-twitter fa-stack-1x"></i>
+    <i class="fa  fa-square-o fa-stack-2x"></i>
+</span>
+```
+
+#### Поле `stack`
+
+Пример добавления стэка иконок:
+
+```js
+{
+    block : 'fa',
+    size : '5x',
+    stack : [
+        {
+            size : '1x',
+            icon : 'twitter'
+        },
+        {
+            size : '2x',
             icon : 'square-o'
         }
     ]
