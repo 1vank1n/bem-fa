@@ -1,14 +1,15 @@
 {
-  "name": "bem-project-stub",
+  "name": "bem-fa",
   "version": "1.0.0",
   "description": "BEM project stub",
-  "bugs": "https://github.com/bem/project-stub/issues",
+  "bugs": "https://github.com/1vank1n/bem-fa/issues",
   "ignore": [
-    ".bem/cache",
     "node_modules",
-    "libs"
+    "libs",
+    ".enb/tmp"
   ],
   "dependencies": {
-    "bem-components": "2.0.0"
+    "bem-core": "2.5.1",
+    "font-awesome": "4.3.0"
   }
 }

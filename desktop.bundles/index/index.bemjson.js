@@ -5,202 +5,128 @@
     head : [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
-        { elem : 'css', url : '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' },
+        { elem : 'css', url : '../../libs/font-awesome/css/font-awesome.min.css' },
         { elem : 'css', url : '_index.css' }
     ],
-    scripts: [{ elem : 'js', url : '_index.js' }],
-    mods : { theme : 'islands' },
     content : [
         {
-            block : 'row',
-            content : [
+            block : 'fa-example-group',
+            title : 'Basic Icons',
+            icons : [
                 {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'Basic Icons'
-                },
-                {
-                    block : 'fa',
                     icon : 'camera-retro'
-                },
-                ' fa-camera-retro'
-            ]
-        },
-        {
-            block : 'row',
-            content : [
-                {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'Larger Icons'
-                },
-                [
-                    { 'size' : 'lg' },
-                    { 'size' : '2x' },
-                    { 'size' : '3x' },
-                    { 'size' : '4x' },
-                    { 'size' : '5x' }
-                ].map(function(b){
-                    return {
-                        elem : 'newline',
-                        tag : 'p',
-                        content : [
-                            {
-                                block : 'fa',
-                                icon : 'camera-retro',
-                                size : b.size
-                            }, ' fa-' + b.size
-                        ]
-                    }
-                })
-            ]
-        },
-        {
-            block : 'row',
-            content : [
-                {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'Fixed Width Icons'
-                },
-                [
-                    { 'icon' : 'home' },
-                    { 'icon' : 'book' },
-                    { 'icon' : 'pencil' },
-                    { 'icon' : 'cog' }
-                ].map(function(b){
-                    return {
-                        elem : 'newline',
-                        tag : 'p',
-                        content : [
-                            {
-                                block : 'fa',
-                                icon : b.icon,
-                                width : 'fixed'
-                            }, ' fa-' + b.icon
-                        ]
-                    }
-                })
-            ]
-        },
-        {
-            block : 'row',
-            content : [
-                {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'List Icons'
-                },
-                {
-                    block : 'list',
-                    tag : 'ul',
-                    mix : { block: 'fa-ul' },
-                    content : [
-                        [
-                            { 'icon' : 'check-square', 'text' : 'bla bla bla 1' },
-                            { 'icon' : 'check-square', 'text' : 'bla bla bla 2' },
-                            { 'icon' : 'check-square', 'text' : 'bla bla bla 3' },
-                            { 'icon' : 'square', 'text' : 'bla bla bla 4' }
-                        ].map(function(b){
-                            return {
-                                elem : 'item',
-                                tag : 'li',
-                                content : [
-                                    {
-                                        block : 'fa',
-                                        icon : b.icon,
-                                        list : true
-                                    }, b.text
-                                ]
-                            }
-                        })
-                    ]
                 }
             ]
         },
         {
-            block : 'row',
-            content : [
+            block : 'fa-example-group',
+            title : 'Larger Icons',
+            icons : [
+                { 'size' : 'lg' },
+                { 'size' : '2x' },
+                { 'size' : '3x' },
+                { 'size' : '4x' },
+                { 'size' : '5x' }
+            ].map(function(icon) {
+                return {
+                    icon : 'camera-retro',
+                    size : icon.size
+                };
+            })
+        },
+        {
+            block : 'fa-example-group',
+            title : 'Fixed Width Icons',
+            icons : [
+                { 'icon' : 'home' },
+                { 'icon' : 'book' },
+                { 'icon' : 'pencil' },
+                { 'icon' : 'cog' }
+            ].map(function(icon) {
+                icon.width = 'fixed';
+
+                return icon;
+            })
+        },
+        {
+            block: 'fa-example-group',
+            title: 'List Icons',
+            icons: [
+                { 'icon': 'check-square' },
+                { 'icon': 'check-square' },
+                { 'icon': 'check-square' },
+                { 'icon': 'square' }
+            ].map(function(icon) {
+                icon.list = true;
+
+                return icon;
+            })
+        },
+        {
+            block: 'fa-example-group',
+            mods: { inline: true },
+            title: 'Animated Icons',
+            icons: [
                 {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'Animated Icons'
-                },
-                {
-                    block : 'fa',
                     size : '5x',
                     icon : 'refresh',
-                    rotate : 'spin'
+                    animate : 'spin'
                 },
                 {
-                    block : 'fa',
                     size : '5x',
                     icon : 'spinner',
-                    rotate : 'pulse'
-                },
+                    animate : 'pulse'
+                }
             ]
         },
         {
-            block : 'row',
-            content : [
+            block: 'fa-example-group',
+            mods: { inline: true },
+            title: 'Rotated & Flipped',
+            icons: [
                 {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'Rotated & Flipped'
-                },
-                {
-                    block : 'fa',
                     size : '5x',
                     icon : 'camera-retro',
                     rotate : '90'
                 },
                 {
-                    block : 'fa',
                     size : '5x',
                     icon : 'camera-retro',
                     rotate : '180'
                 },
                 {
-                    block : 'fa',
                     size : '5x',
                     icon : 'camera-retro',
                     rotate : '270'
                 },
                 {
-                    block : 'fa',
                     size : '5x',
                     icon : 'camera-retro',
                     flip : 'horizontal'
                 },
                 {
-                    block : 'fa',
                     size : '5x',
                     icon : 'camera-retro',
                     rotate : '270',
                     flip : 'vertical'
-                },
+                }
             ]
         },
         {
-            block : 'row',
-            content : [
+            block: 'fa-example-group',
+            mods: { inline: true },
+            title: 'Stacked Icons',
+            content: [
                 {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'Stacked Icons'
-                },
-                {
-                    block : 'fa-stack',
+                    block : 'fa',
                     size : '5x',
-                    content : [
+                    stack : [
                         {
-                            block : 'fa',
-                            stack : '1x',
+                            size : '1x',
                             icon : 'twitter'
                         },
                         {
-                            block : 'fa',
-                            stack : '2x',
+                            size : '2x',
                             icon : 'square-o'
                         }
                     ]
@@ -208,15 +134,11 @@
             ]
         },
         {
-            block : 'row',
-            content : [
+            block: 'fa-example-group',
+            mods: { inline: true },
+            title: 'Free class',
+            icons: [
                 {
-                    block : 'heading',
-                    tag : 'h2',
-                    content : 'Free class'
-                },
-                {
-                    block : 'fa',
                     cls : 'fa-twitter fa-4x fa-flip-horizontal'
                 }
             ]
