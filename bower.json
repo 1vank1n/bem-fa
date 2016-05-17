@@ -6,10 +6,13 @@
   "ignore": [
     "node_modules",
     "libs",
+    "desktop.bundles",
     ".enb/tmp"
   ],
+  "devDependencies": {
+    "bem-core": "2.9.0"
+  },
   "dependencies": {
-    "bem-core": "2.5.1",
     "font-awesome": "4.3.0"
   }
 }

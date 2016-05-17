@@ -1,4 +1,5 @@
-libs/
+tests
+vendors/
 node_modules/
 
 # bem
