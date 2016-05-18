@@ -1,0 +1,6 @@
+module.exports = [
+  "last 2 Chrome version",
+  "last 2 Firefox version",
+  "last 2 Safari version",
+  "last 2 Opera version"
+]

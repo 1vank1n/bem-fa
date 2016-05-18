@@ -215,41 +215,6 @@
 
 #### Поле `stack`
 
-Тип: `String`.
-
-Указывает отношение размеров иконок в стэке. Допустимые значения:
-* '1x'
-* '2x'
-
-```js
-{
-    block : 'fa-stack',
-    size : '5x',
-    content : [
-        {
-            block : 'fa',
-            stack : '1x',
-            icon : 'twitter'
-        },
-        {
-            block : 'fa',
-            stack : '2x',
-            icon : 'square-o'
-        }
-    ]
-}
-```
-
-Результат:
-```html
-<span class="fa-stack fa-5x">
-    <i class="fa  fa-twitter fa-stack-1x"></i>
-    <i class="fa  fa-square-o fa-stack-2x"></i>
-</span>
-```
-
-#### Поле `stack`
-
 Пример добавления стэка иконок:
 
 ```js
